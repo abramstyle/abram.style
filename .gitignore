@@ -22,3 +22,4 @@ logs/*
 mockdb.js
 public/build/*
 isomorphic/clientConfig.js
+.cache/*
