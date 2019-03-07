@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "NODE_ENV=production parcel build index.html --public-url=https://assets.abramstatic.com/assets/"
+    /* "build": "NODE_ENV=production parcel build index.html --public-url=https://assets.abramstatic.com/assets/" */
+    "build": "NODE_ENV=production parcel build index.html"
   },
   "dependencies": {
     "autoprefixer": "^9.4.10",
