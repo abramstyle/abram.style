@@ -1,0 +1,9 @@
+{
+  "name": "abram.style",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "repository": "git@github.com:abramstyle/abram.style.git",
+  "author": "Abramstyle <abram.style@gmail.com>",
+  "license": "MIT"
+}
