@@ -2,6 +2,11 @@ html, body {
   height: 100%;
 }
 
+body {
+  font-family: 'Open Sans', 'Muli', sans-serif;
+  background-color: #e7f6ff;
+}
+
 main {
   height: 100%;
   display: flex;
@@ -10,6 +15,8 @@ main {
 
 .container {
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
@@ -40,33 +47,32 @@ nav {
     list-style-type: none;
     padding: 0;
   }
-
-  a {
-    /* text-decoration: none; */
-  }
 }
 
 header {
   padding: 40px 0;
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  a {
-    color: #666;
-
-    &:hover {
-      color: #555;
-    }
-  }
 }
 
 article {
   flex-grow: 1;
   text-align: center;
+
+  .container {
+    max-width: 50em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
 }
 
 footer {
@@ -75,7 +81,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #ddd;
   }
 
   nav {
