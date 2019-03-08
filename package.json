@@ -11,8 +11,10 @@
     "build": "NODE_ENV=production parcel build index.html"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
     "autoprefixer": "^9.4.10",
-    "normalize.css": "^8.0.1",
     "parcel": "^1.11.0",
     "postcss-modules": "^1.4.1",
     "precss": "^4.0.0"
