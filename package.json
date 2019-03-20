@@ -8,9 +8,11 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "NODE_ENV=production parcel build index.html --public-url //assets.abramstatic.com/assets/"
+    "build": "rm -rf ./dist && NODE_ENV=production parcel build index.html --public-url //assets.abramstatic.com/assets/",
+    "upload": "node ./deploy/upload.js"
   },
   "dependencies": {
+    "@abramstyle/deploy-tools": "^1.0.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
