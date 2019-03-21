@@ -1,0 +1,76 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    filters:
+      branches:
+        only:
+          - master
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:latest
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      # build packages
+      - run: yarn run build
+
+      - save_cache:
+          paths:
+            - dist
+            - node_modules
+          key: v1-build-{{ .Revision }}
+  deploy:
+    filters:
+      branches:
+        only:
+          - master
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+
+      # use built result
+      - restore_cache:
+          keys:
+          - v1-build-{{ .Revision }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-build-
+
+      - run:
+        name: upload to cdn
+        command: yarn run upload
+      - run:
+        name: deploy html
+        command: scp ./dist/index.html ${SERVER_USER}${SERVER_HOST}:/var/www/abram.style/dist
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          requires:
+            - test
+      - deploy:
+          requires:
+            - build
