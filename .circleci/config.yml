@@ -59,11 +59,11 @@ jobs:
           - v1-build-
 
       - run:
-        name: upload to cdn
-        command: yarn run upload
+          name: upload to cdn
+          command: yarn run upload
       - run:
-        name: deploy html
-        command: scp ./dist/index.html ${SERVER_USER}${SERVER_HOST}:/var/www/abram.style/dist
+          name: deploy html
+          command: scp ./dist/index.html ${SERVER_USER}${SERVER_HOST}:/var/www/abram.style/dist
 workflows:
   version: 2
   build-deploy:
