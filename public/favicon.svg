@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="abram.style">
+  <defs>
+    <linearGradient id="aurora" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3DF5A0"/>
+      <stop offset=".52" stop-color="#46D7E6"/>
+      <stop offset="1" stop-color="#A878FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="32" cy="62" r="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2BE0A0" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#7C5CE0" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#0A0E1C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#090D18"/>
+  <rect width="64" height="64" rx="15" fill="url(#glow)"/>
+  <text x="29.5" y="45.5" text-anchor="middle"
+        font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="46"
+        fill="url(#aurora)">a</text>
+  <circle cx="47" cy="42.5" r="3.7" fill="#45E6A8"/>
+</svg>
