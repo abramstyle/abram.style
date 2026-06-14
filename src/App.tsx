@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState, type ReactNode } from 'react'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Topbar from './components/Topbar'
 import Hero from './components/Hero'
 import Contact from './components/Contact'
@@ -32,6 +33,7 @@ export default function App() {
       <CommandPalette open={cmdkOpen} setOpen={setCmdkOpen} reduce={reduce} showToast={showToast} />
       <Toast content={toast} show={toastShown} />
       <Analytics />
+      <SpeedInsights />
     </>
   )
 }
