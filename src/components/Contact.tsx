@@ -1,6 +1,6 @@
 import { type CSSProperties } from 'react'
 
-const EMAIL = 'abram.style@gmail.com'
+const EMAIL = 'hi@abram.style'
 
 /** Second screen: the contact / "say hello" footer. */
 export default function Contact() {

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type Dispatch, type ReactNode, type SetStateAction } from 'react'
 
-const EMAIL = 'abram.style@gmail.com'
+const EMAIL = 'hi@abram.style'
 
 type Command = { label: string; hint: string; kw: string; run: () => void }
 
